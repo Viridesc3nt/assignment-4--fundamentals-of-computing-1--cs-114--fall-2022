@@ -13,7 +13,6 @@ void checkForWinners() {
   fill(0, 0, 0);
   textSize(60);
 
-
   //Player Victories
  if(board[0] == 1 && board[1] == 1 && board[2] == 1) {
     println("Player wins!");
