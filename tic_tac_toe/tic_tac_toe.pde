@@ -8,4 +8,12 @@ void setup() {
 void draw() {
  startGame();
  checkForWinners();
+ checkForDraw();
+ if(checkForDraw() && !gameOver) {
+  fill(0, 0, 0);
+  textSize(60);
+  noLoop();
+  println("Draw!");
+  text("Draw!", 200, 250);
+ }
 }

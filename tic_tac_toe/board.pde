@@ -17,41 +17,49 @@ void checkForWinners() {
  if(board[0] == 1 && board[1] == 1 && board[2] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[0] == 1 && board[4] == 1 && board[8] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[0] == 1 && board[3] == 1 && board[6] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[6] == 1 && board[7] == 1 && board[8] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[2] == 1 && board[5] == 1 && board[8] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
-  if(board[2] == 1 && board[5] == 1 && board[8] == 1) {
+  if(board[2] == 1 && board[4] == 1 && board[6] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[3] == 1 && board[4] == 1 && board[5] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[1] == 1 && board[4] == 1 && board[7] == 1) {
     println("Player wins!");
     text("Player wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
 
@@ -59,43 +67,60 @@ void checkForWinners() {
   if(board[0] == 2 && board[1] == 2 && board[2] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[0] == 2 && board[4] == 2 && board[8] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[0] == 2 && board[3] == 2 && board[6] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[6] == 2 && board[7] == 2 && board[8] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[2] == 2 && board[5] == 2 && board[8] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
-  if(board[2] == 2 && board[5] == 2 && board[8] == 2) {
+  if(board[2] == 2 && board[4] == 2 && board[6] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
    if(board[3] == 2 && board[4] == 2 && board[5] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
   if(board[1] == 2 && board[4] == 2 && board[7] == 2) {
     println("Computer wins!");
     text("Computer wins!", 40, 250);
+    noLoop();
     gameOver = true;
   }
+}
+
+boolean checkForDraw() {
+  for(int i = 0; i < board.length; i++) {
+    if(board[i] <= 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 void keyPressed() {
@@ -203,11 +228,7 @@ void keyPressed() {
 }
 
 void startGame() {
-  for(int i = 0; i < board.length; i++) {
-    print(board[i]);
-  }
   println();
-
   if(!isPlayerTurn && gameOver == false) {
     int turnLocation = int(random(0, 9));
 
@@ -302,8 +323,5 @@ void startGame() {
       isPlayerTurn = true;
       }
     }
-
   }
-
-
 }
